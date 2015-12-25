@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$APPLICATION_NAME}系统后台</title>
+<!--                       CSS                       -->
+<!-- Reset Stylesheet -->
+<load href="__PUBLIC__/resources/css/reset.css" />
+<!-- Main Stylesheet -->
+<load href="__PUBLIC__/resources/css/style.css" />
+<!-- Invalid Stylesheet. This makes stuff look pretty. Remove it if you want the CSS completely valid -->
+<load href="__PUBLIC__/resources/css/invalid.css" />
+<!--                       Javascripts                       -->
+<!-- jQuery -->
+<load href="__PUBLIC__/resources/scripts/jquery-1.3.2.min.js" />
+<!-- jQuery Configuration -->
+<load href="__PUBLIC__/resources/scripts/simpla.jquery.configuration.js" />
+<!-- Facebox jQuery Plugin -->
+<load href="__PUBLIC__/resources/scripts/facebox.js" />
+<!-- jQuery WYSIWYG Plugin -->
+<load href="__PUBLIC__/resources/scripts/jquery.wysiwyg.js" />
+<!-- jQuery Datepicker Plugin -->
+<load href="__PUBLIC__/resources/scripts/jquery.datePicker.js" />
+<load href="__PUBLIC__/resources/scripts/jquery.date.js" />
+</head>
+<body style="background-image: none">
+	<!-- Wrapper for the radial gradient background -->
+	<div id="main-content" style="width: 75%; margin: 0 auto;">
+		<div class="content-box">
+			<!-- Start Content Box -->
+			<div class="content-box-header">
+				<h3>支部风采编辑:{$branchApperance['branchapperancetitle']}</h3>
+				<ul class="content-box-tabs">
+					<li><a href="#tab2">编辑</a></li>
+				</ul>
+				<div class="clear"></div>
+			</div>
+			<!-- End .content-box-header -->
+			<div class="content-box-content">
+				<form
+					action="{:U('BranchApperance/editBranchApperanceSubmit','branchapperanceid=' . $branchApperance[branchapperanceid])}"
+					method="post">
+					<fieldset>
+						<!-- Set class to "column-left" or "column-right" on fieldsets to divide the form into columns -->
+						<p>
+							<label>支部风采标题</label> <input
+								class="text-input medium-input datepicker" type="text"
+								id="medium-input" name="branchapperanceTitle"
+								value="{$branchApperance['branchapperancetitle']}" /> <br />
+						</p>
+						<p>
+							<label>发布人</label> <select name="branchapperancereleaseid"
+								class="small-input">
+								<foreach name="listUser" item="itemUser"> <if
+									condition="$itemUser[userid] eq $branchApperance['branchapperancereleaseid']">
+								<option value="{$itemUser[userid]}" selected="selected">{$itemUser[usernickname]}</option>
+								<else />
+								<option value="{$itemUser[userid]}" >{$itemUser[usernickname]}</option>
+								</if> </foreach>
+							</select> <br />
+						</p>
+						<p>
+							<label>学院</label> <select name="branchapperanceacademy"
+								class="small-input">
+								<foreach name="listAcademy" item="itemAcademy"> <if
+									condition="$itemAcademy[academyname] eq $branchApperance['branchapperanceacademy']">
+								<option value="{$itemAcademy[academyname]}" selected="selected">{$itemAcademy[academyname]}</option>
+								<else />
+								<option value="{$itemAcademy[academyname]}">{$itemAcademy[academyname]}</option>
+								</if> </foreach>
+							</select> <br />
+						</p>
+						<p>
+							<label>支部</label> <select name="branchapperancebranch"
+								class="small-input">
+								<foreach name="listBranch" item="itemBranch"> <if
+									condition="$itemBranch[branchname] eq $branchApperance['branchapperancebranch']">
+								<option value="{$itemBranch[branchname]}" selected="selected">{$itemBranch[branchname]}</option>
+								<else />
+								<option value="{$itemBranch[branchname]}">{$itemBranch[branchname]}</option>
+								</if> </foreach>
+							</select> <br />
+						</p>
+						<p>
+							<label>活动实践内容</label>
+							<div style='height: 600px'>{$editorHtml}</div>
+						</p>
+						<p>
+							<input class="button" type="submit" value="确定" />
+						</p>
+					</fieldset>
+					<div class="clear"></div>
+					<!-- End .clear -->
+				</form>
+			</div>
+			<!-- End .content-box-content -->
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	
+</script>

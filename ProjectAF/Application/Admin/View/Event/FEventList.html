@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+<!--                       CSS                       -->
+<load href="__PUBLIC__/resources/css/reset.css" />
+<load href="__PUBLIC__/resources/css/style.css" />
+<load href="__PUBLIC__/resources/css/invalid.css" />
+<!--                       Javascripts                       -->
+<load href="__PUBLIC__/resources/scripts/jquery-1.3.2.min.js" />
+<load href="__PUBLIC__/resources/scripts/simpla.jquery.configuration.js" />
+<load href="__PUBLIC__/resources/scripts/facebox.js" />
+<load href="__PUBLIC__/resources/scripts/jquery.wysiwyg.js" />
+<load href="__PUBLIC__/resources/scripts/jquery.datePicker.js" />
+<load href="__PUBLIC__/resources/scripts/jquery.date.js" />
+
+<load href="__PUBLIC__/resources/css/default.css" />
+<load href="__PUBLIC__/resources/css/styles.css" />
+
+</head>
+<body>
+	<article class="htmleaf-container">
+		<div class="demo">
+			<header class="demo__header demo__header__pink">
+				<button id="btn_add" class="demo__header__a__img__right"></button>
+				<button id="btn_list" class="demo__header__a__img__left"></button>
+				<div class="demo__header__div">
+					<h1 class="demo__header__div__h1">F</h1>
+				</div>
+			</header>
+
+			<div class="demo__content__event">
+				<div class="demo__card-cont__event">
+					<div id="container1" class="demo__card__event blue"></div>
+				</div>
+			</div>
+		</div>
+	</article>
+
+	<load href="__PUBLIC__/resources/scripts/stopExecutionOnTimeout.js?t=1" />
+	<load href="__PUBLIC__/resources/scripts/jquery-2.1.1.min.js" />
+	<script type="text/javascript">
+		$("#btn_add").on('click', function(e) {
+			htmlobj = $.ajax({
+				url : "{:U('Event/AddEventHtml','usertype=' . $usertype)}",
+				async : false
+			});
+			$("#container1").html(htmlobj.responseText);
+		});
+		$("#btn_list").on('click', function(e) {
+			setContainerByUrl("{:U('Event/GetFEventListHtml')}");
+		});
+
+		$(document).ready(function() {
+			setContainerByUrl("{:U('Event/GetFEventListHtml')}");
+		});
+
+		function setContainerByUrl(address) {
+			htmlobj = $.ajax({
+				url : address,
+				async : false
+			});
+			result = htmlobj.responseText;
+			//替代返回的href中的内容，使其可以加载到Container中
+			result = result.replace(/href\=\"\S*\"/g, function(m) {
+				//alert(m);
+				m = m.substring(0, 5) + "javascript:setContainerByUrl(\'"
+						+ m.substring(6, m.length - 1) + "\')";
+				return m;
+			});
+			$("#container1").html(result);
+
+			var table = document.getElementById("table1");
+			var trs = table.getElementsByTagName('tr');
+			for (var i = 0; i < trs.length; i++) {
+				i++;
+				if (i == trs.length) {
+					return;
+				}
+				trs[i].style.backgroundColor = "#f3f3f3";
+
+			}
+		}
+
+	</script>
+	</div>
+</body>
+</html>

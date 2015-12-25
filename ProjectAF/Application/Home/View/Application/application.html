@@ -1,0 +1,123 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>腾飞教育-申请报名表</title>
+    <meta name="description" content="腾飞游学-实习-留学的项目报名表">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0,user-scalable=no" id="viewport">
+    <link rel="shortcut icon" href="/favicon.db7d7834.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.33155541.png">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="__PUBLIC__/res/styles/application.4954c805.css">
+    <script src="__PUBLIC__/res/scripts/vendor/modernizr.6857963c.js"></script>
+
+  </head>
+  <body>
+  <!--引入头部-->
+  <include file="Layout/header"/>
+
+    <!--Application-->
+    <div class="content">
+      <div class="container">
+        <div class="section">
+          <h3>Application Form</h3>
+        </div>
+        <div class="application">
+            <form action="{:U('SignUp/addSignUp')}" method="post">
+              <label>申请项目*</label>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="signupproject"  value="PFP金融实习">
+                  PFP金融实习
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="signupproject"  value="PST游学项目">
+                  PST游学项目
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="signupproject"  value="留学申请服务">
+                  留学申请服务
+                </label>
+              </div>
+              <div class="form-group">
+                <label>留学区域意愿*（如是留学申请，请务必填写）</label>
+                <input type="text"  name="signuparea" class="form-control"  placeholder="美国，加拿大，澳大利亚，英国">
+              </div>
+              <div class="form-group">
+                <label>姓名*（例：张小明）</label>
+                <input type="text" name="signupname" class="form-control"  placeholder="张小明">
+              </div>
+              <label>性别*</label>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="signupsex" id="optionsRadios1" value="男">
+                  男
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="signupsex" id="optionsRadios2" value="女">
+                  女
+                </label>
+              </div>
+              <div class="form-group">
+                <label>出生日期*</label>
+                <input type="text" class="form-control"  name="signupbirthday" placeholder="1991-01-01">
+              </div>
+              <div class="form-group">
+                <label>学校*</label>
+                <input type="text" class="form-control"  name="signupschool">
+              </div>
+              <div class="form-group">
+                <label>专业*</label>
+                <input type="text" class="form-control"  name="signupmajor">
+              </div>
+              <div class="form-group">
+                <label>年级*</label>
+                <input type="text" class="form-control"  name="signupgradeyear">
+              </div>
+              <div class="form-group">
+                <label>手机*</label>
+                <input type="tel" class="form-control"  name="signupcellphone">
+              </div>
+              <div class="form-group">
+                <label>E-mail*（用于收发录取信息，须填写常用邮箱）</label>
+                <input type="email" class="form-control"  name="signupmail">
+              </div>
+              <div class="form-group">
+                <label>微信*</label>
+                <input type="text" class="form-control"  name="signupweixing">
+              </div>
+              <div class="form-group">
+                <label>推荐人</label>
+                <input type="text" class="form-control"  name="signupreferee">
+              </div>
+              <div class="form-group">
+                <label>身份证号码*</label>
+                <input type="text" class="form-control"  name="signupidcard">
+              </div>
+              <div class="form-group">
+                <label>家长联系方式*</label>
+                <input type="tel" class="form-control"  name="signupfamilycontact">
+              </div>
+              <label>个人经历（校内外）</label>
+              <textarea class="form-control" rows="8" name="signupaward"></textarea>
+              <label>个人获奖情况（校内外）</label>
+              <textarea class="form-control" rows="8" name="signupexperience"></textarea>
+              <label>以上填写资料请务必真实有效，我们的工作人员会在核证后，会尽量处理您的申请！</label>
+               <button type="submit" class="btn btn-default">提交</button>
+            </form>
+        </div>
+      </div>
+    </div>
+    <!--end-->
+  <!--引入底部文件-->
+  <include file="Layout/footer"/>
+    <script src="__PUBLIC__/res/scripts/vendor.8ea373f3.js"></script>
+    <script src="__PUBLIC__/res/scripts/plugins.19a1d77b.js"></script>
+  </body>
+</html>

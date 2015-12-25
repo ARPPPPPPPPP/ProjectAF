@@ -1,0 +1,88 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>腾飞教育-项目申请步骤、费用及答疑</title>
+    <meta name="description" content="腾飞教育项目申请指南步骤，费用明细，答疑">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0,user-scalable=no" id="viewport">
+    <link rel="shortcut icon" href="/favicon.db7d7834.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.33155541.png">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="__PUBLIC__/res/styles/guide.13beed40.css">
+    <script src="__PUBLIC__/res/scripts/vendor/modernizr.6857963c.js"></script>
+  </head>
+  <body>
+  <!--引入头部-->
+  <include file="Layout/header"/>
+    <!--内容-->
+    <div class="content">
+      <div class="container">
+        <div class="row">
+          <!--边栏导航-->
+          <div class="col-xs-12 col-md-4">
+              <div class="sidebar">
+                <a href="#step">申请步骤</a>
+                <button type="button" data-toggle="modal" data-target="#time-cost"><span class="glyphicon glyphicon-yen" aria-hidden="true"></span>项目费用明细</button>
+                <button  type="button" data-toggle="modal" data-target="#FAQ"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>常见问题F&Q</button>
+              </div>
+          </div>
+          <!--申请指南-->
+          <div id="step" class="col-xs-12 col-md-8">
+            <div class="section">
+              <h3>申请步骤</h3>
+            </div>
+            <div class="step-content">
+              {$step}
+            </div>
+          </div>
+          <!--end-->
+          <!--项目费用-->
+          <div class="modal fade" id="time-cost" tabindex="-1" role="dialog" aria-labelledby="time-costLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="time-costLabel">项目费用明细</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="detail">
+                    {$fare}
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">了解</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--end-->
+          <!--F&Q-->
+          <div class="modal fade" id="FAQ" tabindex="-1" role="dialog" aria-labelledby="FAQLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="FAQ-detail">常见问题F&Q</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="detail">
+                    {$faq}
+                  </div>  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">了解</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--end-->
+        </div>
+      </div>
+    </div>
+
+  <!--引入底部文件-->
+  <include file="Layout/footer"/>
+    <script src="__PUBLIC__/res/scripts/vendor.8ea373f3.js"></script>
+    <script src="__PUBLIC__/res/scripts/plugins.19a1d77b.js"></script>
+  </body>
+</html>

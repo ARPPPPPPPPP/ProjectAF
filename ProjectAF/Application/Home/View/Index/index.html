@@ -1,0 +1,147 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>腾飞教育-首创的游学-实习-留学一体化项目</title>
+    <meta name="description" content="腾飞教育首创PFP实习，PST游学，留学一体化项目">
+      <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0,user-scalable=no" id="viewport">
+    <link rel="shortcut icon" href="/favicon.db7d7834.ico">
+      <link rel="icon" href="/favicon.db7d7834.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.33155541.png">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="__PUBLIC__/res/styles/screen.08e6bbd1.css">
+    <script src="__PUBLIC__/res/scripts/vendor/modernizr.6857963c.js"></script>
+  </head>
+  <body>
+  <!--引入头部-->
+  <include file="Layout/header"/>
+
+    <!--大图区-->
+    <div class="bgpic">
+          <img class="bg" src="__PUBLIC__/Download/{$bgpic[homepicturereleasedate]|substr=0,10}/{$bgpic[homepicturecontenturl]}" alt="腾飞教育">
+          <h1 class="slogan animated">腾飞教育</h1>
+    </div>
+
+    <!--内容区-->
+    <div class="content">
+      <div class="container inner">
+         <div class="section">
+            <h3>PAL Mission & Vision</h3>
+          </div>
+          <div class="row">
+            <!--左边 公司简介-->
+            <div class="col-md-6">
+                <div class="jumbotron">
+                  <div class="container">
+                     <h1>腾飞教育简介</h1>
+                    <p>
+                       腾飞教育系香港一间综合型教育实习培训机构，由来自世界一流名校的专业人士组成核心管理团队。公司现有全球首创的“游学-实习-留学”一体化项目，并邀请了多间常青藤高校、国际知名投行与世界500强企业加盟。
+                    </p>
+                  </div>
+                </div>
+            </div>
+            <!--右边 项目宗旨-->
+            <div class="col-md-6">
+                 <div class="jumbotron">
+                     <div class="container">
+                        <h1>腾飞教育宗旨</h1>
+                        <p>
+                           腾飞遵循个性化、多元化和国际化的发展模式，本着以学生为本的理念，为各位学员量身打造个性化的项目内容，提供一系列的实战培训，为学生未来的发展打稳根基，让在校大学生提早做好职业规划，缔造非凡人生。
+                        </p>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <!--学生之区-->
+          <div class="section">
+            <h3>Voice of Students</h3>
+          </div>
+          <div class="row">
+              <foreach name="voices" item="item">
+                 <!--Echo-->
+                  <div class="col-sm-6 col-md-3">
+                    <div class="thumbnail">
+                      <img class="img-responsive" src="__PUBLIC__/Download/{$item[breakingnewsreleasedate]|substr=0,10}/{$item[breakingnewsurl]}">
+                      <div class="caption">
+                        <h3>{$item[breakingnewsname]}</h3>
+                        <p>{$item[breakingnewsmaincontent]}</p>
+                        <p><a href="{:U('News/voice','breakingnewsid=' . $item[breakingnewsid])}" class="btn btn-primary" role="button">详情</a></p>
+                      </div>
+                    </div>
+                 </div>
+              </foreach>
+          </div>
+
+          <!--新闻区-->
+          <div class="section">
+            <h3>Breaking News</h3>
+          </div>
+          <div class="row">
+              <foreach name="news" item="item">
+                <!--新闻1-->
+                  <div class="col-sm-12 col-md-12">
+                      <article>
+                        <div class="post-head">
+                          <h1 class="post-title">{$item[breakingnewsname]}</h1>
+                          <div class="post-meta">
+                            <span class="author">作者：<b>{$item[breakingnewsrelease]}</b></span>
+                            <time class="post-date">&nbsp;&nbsp;{$item[breakingnewsreleasedate]}</time>
+                          </div>
+                        </div>
+                        <div class="post-abstract">
+                          <p>{$item[breakingnewsmaincontent]}</p>
+                        </div>
+                        <div class="post-footer">
+                          <a href="{:U('News/news','breakingnewsid=' . $item[breakingnewsid])}" class="btn btn-default">阅读全文</a>
+                        </div>
+                        <div class="post-category">
+                          <span class="glyphicon glyphicon-tag" aria-hidden="true"></span>
+                          <span class="tag">&nbsp;&nbsp;学员回馈</span>
+                        </div>
+                      </article>
+                  </div>
+              </foreach>
+          </div>
+
+           <div class="section">
+            <h3>Join us</h3>
+          </div>
+          <!--真诚的友谊-->
+          <div class="intro">
+            <h3>真诚的友谊</h3>
+            <p>
+              在这里，你可以遇见来自全国各地不同高校、不同专业的学界精英；在这里，你将收获一份又一份真诚的友谊。他们和你一样，充满梦想并孜孜不倦地追求，他们会让你看到更多元的世界。在为期一周的日日夜夜里，你们将穿梭在香港这样一个国际金融大都市之中，一起学习、一起工作、一起生活，共同分担恼人的挫折，也一同享受成功的喜悦，从而培养出真挚的感情。即使项目结束，这样情谊也将持续下去。
+            </p>
+          </div>
+
+          <!--高端的人脉-->
+           <div class="intro ">
+            <h3>高端的人脉</h3>
+            <p>
+              每一位导师都是业界精英，每一位学员都是未来人才。一周的培训学习，不仅给予你知识，还将给予你无可估量的高端人脉。每当项目结束之后，导师与学员之间仍会保持联系，既可以为学员解答专业问题，也可以与学员一同分享生活的点滴，亦师亦友，认识他们会是你人生中珍贵的一笔财富。
+            </p>
+          </div>
+          <!--综合能力“质“的提升-->
+           <div class="intro">
+            <h3>综合能力“质“的提升</h3>
+            <p>
+              经过一周的培训，学员将通过前所未有的商业体验让自己的综合能力得到”质“的飞跃。无论你来自哪所学校，无论你的专业是什么，在这里，你就是一名商业人士。投资银行体验、商业策划书竞赛、五百强跨国企业研习等一系列培训项目，都将在短时间内全面提高学员的个人能力。
+            </p>
+          </div>
+          <!--所获证书-->
+           <div class="intro">
+            <h3>所获证书</h3>
+            <p class="intro-body">
+              按照规定顺利完成项目之后，每位学员将获得实习证明证书，表现优异者将获得五百强企业高管推荐信和比赛获奖证书。以上证书都将为学员日后的求职和求学简历增色不少。
+            </p>
+          </div>
+      </div>
+    </div>
+  <!--引入底部文件-->
+  <include file="Layout/footer"/>
+    <script src="__PUBLIC__/res/scripts/vendor.8ea373f3.js"></script>
+    <script src="__PUBLIC__/res/scripts/plugins.19a1d77b.js"></script>
+    <script src="__PUBLIC__/res/scripts/main.f5189193.js"></script>
+  </body>
+</html>

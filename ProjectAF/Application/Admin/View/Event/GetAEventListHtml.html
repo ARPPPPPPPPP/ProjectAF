@@ -1,0 +1,78 @@
+<div id="main-content" style="height: 100%;">
+	<div class="content-box-header" style="width: 100%; height: 7%;">
+		<h3>事件</h3>
+
+		<div class="clear"></div>
+	</div>
+	<!-- End .content-box-header -->
+	<div class="content-box-content"
+		style="background-color: #fff; width: 100%; height: 93%;">
+		<div class="tab-content default-tab" id="tab1">
+			<table id="table1" style="table-layout: fixed; width: 100%;">
+				<thead>
+					<tr>
+						<th width="40%" align="center">标题</th>
+						<th width="30%" align="center">过期时间</th>
+						<th width="15%" align="center">状态</th>
+						<th width="15%" align="center">操作</th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<td colspan="7">
+							<div class="pagination">{$page}</div>
+							<div class="clear"></div>
+						</td>
+					</tr>
+				</tfoot>
+				<tbody>
+					<foreach name="list" item="item"> <if
+						condition="$item[overtimestatus] eq '0'">
+					<tr>
+						<td onclick="clickTitle({$item[eventid]});"
+							style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{$item[eventtitle]}</td>
+						<td
+							style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{$item[overtime]}</td>
+
+						<td
+							style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><a
+							onclick="clickTableItem({$item[eventid]});">{$item[eventstatus]}</a></td>
+						<td><a onclick="clickTableItem2({$item[eventid]});"
+							title="Edit" target="_blank"><img
+								src="__PUBLIC__/resources/images/icons/pencil.png" alt="编辑" /></a></td>
+					</tr>
+					<else />
+					<tr>
+						<td onclick="clickTitle({$item[eventid]});"
+							style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{$item[eventtitle]}</td>
+						<td
+							style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{$item[overtime]}</td>
+
+						<td
+							style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"><a
+							onclick="clickTableItem({$item[eventid]});">{$item[eventstatus]}</a></td>
+						<td><a title="OverTime" target="_blank"><img
+								src="__PUBLIC__/resources/images/icons/cross.png" alt="编辑" /></a></td>
+					</tr>
+					</if> </foreach>
+				</tbody>
+				<script type="text/javascript">
+				
+				function clickTableItem(id){
+					//加载详细信息
+					location.replace("{:U('Event/EventDetail')}" + "?eventid=" + id); 
+				}
+				function clickTableItem2(id){
+					//加载详细信息
+					location.replace("{:U('Event/EventEditA')}" + "?eventid=" + id); 
+				}
+				function clickTitle(id){
+					//alert(e);
+					location.replace("{:U('Event/EventDetail')}" + "?eventid=" + id);
+				}
+				</script>
+			</table>
+		</div>
+
+	</div>
+</div>

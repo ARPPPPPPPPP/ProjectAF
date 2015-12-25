@@ -1,0 +1,61 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>腾飞教育-{$news[breakingnewsname]}</title>
+    <meta name="description" content="{$news[breakingnewsmaincontent]}">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0,user-scalable=no" id="viewport">
+    <link rel="shortcut icon" href="/favicon.db7d7834.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.33155541.png">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+      <link rel="stylesheet" href="__PUBLIC__/res/styles/news.77b24687.css">
+      <script src="__PUBLIC__/res/scripts/vendor/modernizr.6857963c.js"></script>
+  </head>
+  <body>
+  <!--引入头部-->
+  <include file="Layout/header"/>
+    <!--内容区-->
+   <div class="content">
+     <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-8">
+          <article>
+            <div class="post-head">
+                <h1 class="post-title">{$news[breakingnewsname]}</h1>
+                <div class="post-meta">
+                  <span class="author">作者：<b>{$news[breakingnewsrelease]}</b></span>
+                  <time class="post-date">&nbsp;&nbsp;{$news[breakingnewsreleasedate]}</time>
+                </div>
+            </div>
+            <div class="post-content">
+                {$content}
+             </div>
+            <div class="post-category">
+                 <span class="glyphicon glyphicon-tag" aria-hidden="true"></span>
+                <span class="tag">&nbsp;&nbsp;新闻动态</span>
+            </div>
+        </article>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <div class="section">
+            <h3>猜你喜欢</h3>
+          </div>
+            <div class="intro">
+                <foreach name="links" item="item">
+                    <div class="link">
+                        <a class="link-color-base link-sm" href="{:U('News/news','breakingnewsid=' . $item[breakingnewsid])}"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true">{$item[breakingnewsname]}</a>
+                    </div>
+                </foreach>
+                <a class="back" href="{:U('Index/index')}">返回首页</a>
+            </div>
+
+        </div>
+      </div>
+     </div>
+   </div>
+  <!--引入底部文件-->
+  <include file="Layout/footer"/>
+  <script src="__PUBLIC__/res/scripts/vendor.8ea373f3.js"></script>
+  <script src="__PUBLIC__/res/scripts/plugins.19a1d77b.js"></script>
+  </body>
+</html>

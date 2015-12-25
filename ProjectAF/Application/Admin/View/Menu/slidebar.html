@@ -1,0 +1,40 @@
+
+<div id="sidebar-wrapper">
+	<!-- Logo (221px wide) -->
+	<img id="logo" src="__PUBLIC__/resources/images/logo.JPG"
+		style="width: 200px; height: 200px; align: center;"
+		alt="{$APPLICATION_NAME} System" />
+	<!-- Sidebar Profile links -->
+	<div id="profile-links">
+		Hello, <a href="{:U('User/userSetting','userid=' . $USER_ID)}"
+			title="Edit your profile">{:session('userAccount')} ! </a><br /> <br />
+		<a href="{:U('User/userSetting','userid=' . $USER_ID)}"
+			title="View the Site">AccountSetting</a> | <a
+			href="{:U('Login/logout')}" title="Sign Out">Log out</a>
+	</div>
+	<ul id="main-nav">
+		<li><a href="{:U('Login/home')}"<if
+					condition="$CURRENT_MENU eq 'HOME'"> class="nav-top-item
+				no-submenu current" <else /> class="nav-top-item no-submenu" </if>>Home</a></li>
+		<li><a href="{:U('BreakingNews/allBreakingNews')}"<if
+					condition="$CURRENT_MENU eq 'BREAKINGNEWS'">
+				class="nav-top-item no-submenu current" <else />
+				class="nav-top-item no-submenu" </if>>EditContent</a></li>
+		<li><a href="{:U('SignUp/allSignUp')}"<if
+					condition="$CURRENT_MENU eq 'SIGNUP'"> class="nav-top-item
+				no-submenu current" <else /> class="nav-top-item no-submenu" </if>>SignUp</a></li>
+		<li><a href="{:U('Download/allDownload')}"<if
+					condition="$CURRENT_MENU eq 'DOWNLOAD'"> class="nav-top-item
+				no-submenu current" <else /> class="nav-top-item no-submenu" </if>>Download</a></li>
+		<li><a href="{:U('HomePicture/allHomePicture')}"<if
+					condition="$CURRENT_MENU eq 'HOMEPICTURE'">
+				class="nav-top-item no-submenu current" <else />
+				class="nav-top-item no-submenu" </if>>HomePagePicture</a></li>
+		<li><a href="{:U('SystemSetting/systemSetting','userid=' . $USER_ID)}"<if
+					condition="$CURRENT_MENU eq 'SYSTEM'"> class="nav-top-item
+				no-submenu current" <else /> class="nav-top-item no-submenu" </if>>SystemSetting</a></li>
+		<li><a href="{:U('User/userSetting','userid=' . $USER_ID)}"<if
+					condition="$CURRENT_MENU eq 'USER'"> class="nav-top-item
+				no-submenu current" <else /> class="nav-top-item no-submenu" </if>>AccountSetting</a></li>
+	</ul>
+</div>

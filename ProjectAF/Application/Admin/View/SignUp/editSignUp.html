@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$APPLICATION_NAME} System</title>
+<!--                       CSS                       -->
+<!-- Reset Stylesheet -->
+<load href="__PUBLIC__/resources/css/reset.css" />
+<!-- Main Stylesheet -->
+<load href="__PUBLIC__/resources/css/style.css" />
+<!-- Invalid Stylesheet. This makes stuff look pretty. Remove it if you want the CSS completely valid -->
+<load href="__PUBLIC__/resources/css/invalid.css" />
+<!--                       Javascripts                       -->
+<!-- jQuery -->
+<load href="__PUBLIC__/resources/scripts/jquery-1.3.2.min.js" />
+<!-- jQuery Configuration -->
+<load href="__PUBLIC__/resources/scripts/simpla.jquery.configuration.js" />
+<!-- Facebox jQuery Plugin -->
+<load href="__PUBLIC__/resources/scripts/facebox.js" />
+<!-- jQuery WYSIWYG Plugin -->
+<load href="__PUBLIC__/resources/scripts/jquery.wysiwyg.js" />
+<!-- jQuery Datepicker Plugin -->
+<load href="__PUBLIC__/resources/scripts/jquery.datePicker.js" />
+<load href="__PUBLIC__/resources/scripts/jquery.date.js" />
+</head>
+<body style="background-image: none">
+	<!-- Wrapper for the radial gradient background -->
+	<div id="main-content" style="width: 75%; margin: 0 auto;">
+		<div class="content-box">
+			<!-- Start Content Box -->
+			<div class="content-box-header">
+				<h3>SignUp:{$signUp['signupname']}</h3>
+				<ul class="content-box-tabs">
+					<li><a href="#tab2">Edit</a></li>
+				</ul>
+				<div class="clear"></div>
+			</div>
+			<!-- End .content-box-header -->
+			<div class="content-box-content">
+				<form
+					action="{:U('SignUp/editSignUpSubmit','signupid=' . $signUp[signupid])}"
+					method="post">
+					<fieldset>
+						<!-- Set class to "column-left" or "column-right" on fieldsets to divide the form into columns -->
+						<p>
+							<label>SignUpProject</label> <input
+								class="text-input medium-input datepicker" type="text"
+								id="medium-input" name="signupproject"
+								value="{$signUp['signupproject']}" /> <br />
+						</p>
+						<p>
+							<label>SignUpArea</label> <input
+								class="text-input medium-input datepicker" type="text"
+								id="medium-input" name="signuparea"
+								value="{$signUp['signuparea']}" /> <br />
+						</p>
+						<p>
+							<label>SignUpName</label> <input
+								class="text-input medium-input datepicker" type="text"
+								id="medium-input" name="signupname"
+								value="{$signUp['signupname']}" /> <br />
+						</p>
+						<p>
+							<label>SignUpSex</label> <input
+								class="text-input medium-input datepicker" type="text"
+								id="medium-input" name="signupsex"
+								value="{$signUp['signupsex']}" /> <br />
+						</p>
+						<p>
+							<label>SignUpBirthDay</label> <input
+								class="text-input medium-input datepicker" type="text"
+								id="medium-input" name="signupbirthday"
+								value="{$signUp['signupbirthday']}" /> <br />
+						</p>
+						<p>
+							<label>SignUpSchool</label> <input
+								class="text-input medium-input datepicker" type="text"
+								id="medium-input" name="signupschool"
+								value="{$signUp['signupschool']}" /> <br />
+						</p>
+						<p>
+							<label>SignUpMajor</label> <input
+								class="text-input medium-input datepicker" type="text"
+								id="medium-input" name="signupmajor"
+								value="{$signUp['signupmajor']}" /> <br />
+						</p>
+						<p>
+							<label>SignUpGradeYear</label> <input
+								class="text-input medium-input datepicker" type="text"
+								id="medium-input" name="signupgradeyear"
+								value="{$signUp['signupgradeyear']}" /> <br />
+						</p>
+						<p>
+							<label>SignUpCellPhone</label> <input
+								class="text-input medium-input datepicker" type="text"
+								id="medium-input" name="signupcellphone"
+								value="{$signUp['signupcellphone']}" /> <br />
+						</p>
+						<p>
+							<label>SignUpMail</label> <input
+								class="text-input medium-input datepicker" type="text"
+								id="medium-input" name="signupmail"
+								value="{$signUp['signupmail']}" /> <br />
+						</p>
+						<p>
+							<label>SignUpWeiXing</label> <input
+								class="text-input medium-input datepicker" type="text"
+								id="medium-input" name="signupweixing"
+								value="{$signUp['signupweixing']}" /> <br />
+						</p>
+						<p>
+							<label>SignUpReferee</label> <input
+								class="text-input medium-input datepicker" type="text"
+								id="medium-input" name="signupreferee"
+								value="{$signUp['signupreferee']}" /> <br />
+						</p>
+						<p>
+							<label>SignUpIDCard</label> <input
+								class="text-input medium-input datepicker" type="text"
+								id="medium-input" name="signupidcard"
+								value="{$signUp['signupidcard']}" /> <br />
+						</p>
+						<p>
+							<label>SignUpFamilyContact</label> <input
+								class="text-input medium-input datepicker" type="text"
+								id="medium-input" name="signupfamilycontact"
+								value="{$signUp['signupfamilycontact']}" /> <br />
+						</p>
+						<p>
+							<label>SignUpExperience</label>
+							<textarea class="text-input medium-input datepicker" type="text"
+								id="medium-input" name="signupexperience"
+								style="height: 200px; overflow: auto;">{$signUp['signupexperience']}</textarea>
+							<br />
+						</p>
+						<p>
+							<label>SignUpAward</label>
+							<textarea class="text-input medium-input datepicker" type="text"
+								id="medium-input" name="signupaward"
+								style="height: 200px; overflow: auto;">{$signUp['signupaward']}</textarea>
+							<br />
+						</p>
+						<p>
+							<input class="button" type="submit" value="Submit" />
+						</p>
+
+					</fieldset>
+					<div class="clear"></div>
+					<!-- End .clear -->
+				</form>
+			</div>
+			<!-- End .content-box-content -->
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	
+</script>

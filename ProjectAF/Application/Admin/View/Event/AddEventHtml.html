@@ -1,0 +1,20 @@
+
+<form action="{:U('Event/AAddEventSubmit','usertype=' . $usertype)}"
+	enctype="multipart/form-data" method="post" style="padding:1rem;height:100%;">
+	<fieldset style="height:100%;">
+		<!-- Set class to "column-left" or "column-right" on fieldsets to divide the form into columns -->
+		<p>
+			<label class="add-event-title">标题</label> <input
+				class="text-input medium-input datepicker" type="text"
+				id="medium-input" name="eventTitle" /> <br />
+		</p>
+		<p>
+			<label class="add-event-title">过期</label> <input
+				class="text-input medium-input" type="date" value="{$time}"
+				id="medium-input" name="eventOvertime" /> <br />
+		</p>
+		<p style="margin-top:15rem;">
+			<input class="dow dow__center__a" type="submit" value="确定" />
+		</p>
+	</fieldset>
+</form>

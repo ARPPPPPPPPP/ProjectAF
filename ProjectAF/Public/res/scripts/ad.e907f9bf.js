@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".bg").one("load",function(){$(".slogan").one("load",function(){$(".slogan").addClass("fadeIn")}).each(function(){this.complete&&$(this).load()})}).each(function(){this.complete&&$(this).load()})});
